@@ -1,10 +1,11 @@
 import diaryData from "./diaries.json" with { type: "json" };
 import type { DiaryEntry } from "../types.js";
 
+const diaries: DiaryEntry[] = diaryData as DiaryEntry[];
 
-const diaries: Array<DiaryEntry> = diaryData as Array<DiaryEntry>;
+export const getEntries = (): DiaryEntry[] => diaries;
 
-export const getEntries = () => diaries;
+export const getEntriesWithoutSensitiveInfo = (): NonSensitiveInformationDiaryEntry[] => diaries 
 
-export const addEntry = () => null;
+export const addEntry = (): undefined =>  undefined;
 
